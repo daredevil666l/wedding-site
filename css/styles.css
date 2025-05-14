@@ -1,0 +1,112 @@
+/* styles.css */
+:root {
+  --primary-color: #e83e8c;
+  --secondary-color: #333333;
+  --accent-color: #f8f9fa;
+  --text-color: #212529;
+  --light-text: #6c757d;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero section */
+.hero-image {
+  background-image: url('your-hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Portfolio hover effects */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  padding: 1.5rem;
+  transition: bottom 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  bottom: 0;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-outline {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Form styling */
+.form-control {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.2);
+}
