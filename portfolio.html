@@ -51,6 +51,27 @@
     .btn-soft:hover {
       transform: translateY(-2px);
     }
+    /* Gallery card hover animations */
+    .gallery-card {
+      transition: all 0.4s ease;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .gallery-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    .gallery-card img {
+      transition: all 0.5s ease;
+    }
+    .gallery-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+    .gallery-card:hover h3 {
+      color: var(--primary);
+    }
   </style>
 </head>
 <body class="overflow-x-hidden">
@@ -94,104 +115,137 @@
 
   <!-- GALLERY -->
   <section class="py-16">
-    <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- 1 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
           src="https://media.istockphoto.com/id/1399000012/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D1%80%D0%BE%D1%81%D0%B0%D1%8E%D1%82-%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%82%D1%82%D0%B8-%D0%BD%D0%B0-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85%D0%B0-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%83-%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D0%BE%D0%BD%D0%B8-%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%8F%D1%82-%D0%BC%D0%B8%D0%BC%D0%BE-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9-%D1%86%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%B8.jpg?s=612x612&w=0&k=20&c=kpqgOwqPObcZYUbIy5UHF0bzDjEPKpTNrSH-38lQ2W8="
-          alt="Project 1"
-          class="w-full h-64 object-cover"
+          alt="Mystical Forest"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Elegant Arch</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Mystical Forest</h3>
         </div>
       </div>
       <!-- 2 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1432007084/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%B0%D1%80%D0%B0-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D0%B5%D1%82-%D1%81%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE-%D0%BE-%D0%B1%D1%80%D0%B0%D0%BA%D0%B5-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8E-%D0%B1%D1%80%D0%B0%D0%BA%D0%B0-%D0%B8-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82-%D0%B4%D0%BB%D1%8F-%D1%8E%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D1%81%D0%BE%D1%8E%D0%B7%D0%B0.jpg?s=612x612&w=0&k=20&c=xN-WWv085rBwDp1qxUEeCCc18PsSo2c6A5g1XvfiADQ="
-          alt="Project 2"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/1397574789/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5-%D0%BC%D1%8B-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC-%D0%BC%D0%B8%D1%80-%D0%BB%D1%83%D1%87%D1%88%D0%B5.jpg?s=612x612&w=0&k=20&c=ed2aLF2YrzFAB_QcOQnlikKy-wdhcplHHZO9iJyI_Rg="
+          alt="Caramel Latte"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Bridal Bouquet</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Caramel Latte</h3>
         </div>
       </div>
       <!-- 3 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
           src="https://media.istockphoto.com/id/1190043570/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D1%87%D0%B0%D1%81%D1%82%D0%BB%D0%B8%D0%B2%D0%B0%D1%8F-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F-%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85%D0%B0-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B-%D0%BD%D0%B0-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9-%D1%86%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%B8-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F-%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D1%8F.jpg?s=612x612&w=0&k=20&c=T39sTJzrRVSN-G0Vs7u6fVhrD8eyTkRVhW3_jTba_co="
-          alt="Project 3"
-          class="w-full h-64 object-cover"
+          alt="Aesthetic"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Table Setting</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Aesthetic</h3>
         </div>
       </div>
       <!-- 4 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
           src="https://media.istockphoto.com/id/1303189272/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0-%D0%B8-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D1%8E%D1%82-%D0%BC%D0%B8%D0%B7%D0%B8%D0%BD%D0%B5%D1%86-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F-%D0%BF%D0%B0%D1%80%D0%B0-%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%D1%81%D1%8F-%D0%B7%D0%B0-%D1%80%D1%83%D0%BA%D1%83-%D1%81-%D1%84%D0%BE%D0%BD%D0%BE%D0%BC-%D0%B7%D0%B0%D0%BA%D0%B0%D1%82%D0%B0.jpg?s=612x612&w=0&k=20&c=2l2BrQ3q1GxyP_lTHhK1KbDtkBKZacbyoJnVbJkVUjw="
-          alt="Project 4"
-          class="w-full h-64 object-cover"
+          alt="Art"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Wedding Cake</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Art</h3>
         </div>
       </div>
       <!-- 5 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1390990519/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BE%D0%B1%D1%80%D0%B0%D0%B7-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D0%B0%D0%B7%D0%B8%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85%D0%B0-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B.jpg?s=612x612&w=0&k=20&c=pcRJ3-b1WKo6RO_ZWO9AHPycndogXa06EoZOY8hD5mQ="
-          alt="Project 5"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/1435794871/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%80%D1%83%D0%BA%D0%B8-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85%D0%B0-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B.jpg?s=612x612&w=0&k=20&c=oS5B-qdROz6ja0VJirjsrCUgoJcmGkW8QtOv0CpbGOw="
+          alt="Laconic & Modern"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Floral Arrangements</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Laconic & Modern</h3>
         </div>
       </div>
       <!-- 6 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1435794871/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%80%D1%83%D0%BA%D0%B8-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85%D0%B0-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B.jpg?s=612x612&w=0&k=20&c=oS5B-qdROz6ja0VJirjsrCUgoJcmGkW8QtOv0CpbGOw="
-          alt="Project 6"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/1388562262/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B5-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9-%D1%86%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%B8-%D0%BD%D0%B0-%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%BC-%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B5-%D0%BD%D0%B0-%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC-%D0%BF%D0%BB%D1%8F%D0%B6%D0%B5.jpg?s=612x612&w=0&k=20&c=G8JSqUCD8EDjbqOubbz4gWQ9S5eX4FG6BXvmJ-AJ1xE="
+          alt="Timeless"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Reception Styling</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Timeless</h3>
         </div>
       </div>
       <!-- 7 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1399000045/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%BE%D1%81%D1%82%D0%B8-%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D1%8B-%D1%85%D0%BB%D0%BE%D0%BF%D0%B0%D1%8E%D1%82-%D0%B2-%D0%BB%D0%B0%D0%B4%D0%BE%D1%88%D0%B8-%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B6%D0%B5%D0%BD%D1%8B-%D0%B8%D0%B4%D1%83%D1%82-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%83-%D1%80%D0%B0%D0%B4%D0%BE%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0-%D0%B8%D0%B4%D1%83%D1%82.jpg?s=612x612&w=0&k=20&c=NJ2LDzOjYdXeXm9No5il2TdlQTTGgVaHBDWDZi-wZJ0="
-          alt="Project 7"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/1819369148/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%B0%D1%80%D0%B0-%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%82%D1%82%D0%B8-%D0%B8-%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0-%D0%BD%D0%B0-%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%BC-%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B5-%D1%81-%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-%D0%BF%D1%80%D0%BE%D0%B3%D1%83%D0%BB%D0%BA%D0%BE%D0%B9-%D0%B8-%D1%81%D1%87%D0%B0%D1%81%D1%82%D0%BB%D0%B8%D0%B2%D1%8B%D0%BC.jpg?s=612x612&w=0&k=20&c=GT2-3OMTySYqG9-Giei-Upa0mqowtG4U24wJ2B7-5AE="
+          alt="Modern Loft"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Mood Lighting</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Modern Loft</h3>
         </div>
       </div>
       <!-- 8 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1388562262/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B5-%D0%B6%D0%B5%D0%BD%D0%B8%D1%85-%D0%B8-%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9-%D1%86%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%B8-%D0%BD%D0%B0-%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%BC-%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B5-%D0%BD%D0%B0-%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC-%D0%BF%D0%BB%D1%8F%D0%B6%D0%B5.jpg?s=612x612&w=0&k=20&c=G8JSqUCD8EDjbqOubbz4gWQ9S5eX4FG6BXvmJ-AJ1xE="
-          alt="Project 8"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/1186306039/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%8D%D1%82%D0%BE%D1%82-%D0%B4%D0%B5%D0%BD%D1%8C-%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%BC-%D0%B8%D0%B7-%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D1%85-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85-%D0%B4%D0%BD%D0%B5%D0%B9-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5.jpg?s=612x612&w=0&k=20&c=Q0jVh9u1M87WjrwH91dGs08HRvSxAGIvz6TfhsKSTBA="
+          alt="Luxurious Classic"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Dance Floor Design</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Luxurious Classic</h3>
         </div>
       </div>
       <!-- 9 -->
-      <div class="smooth-card overflow-hidden">
+      <div class="overflow-hidden gallery-card">
         <img
-          src="https://media.istockphoto.com/id/1390040422/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D1%87%D1%82%D0%BE-%D0%B6%D0%B5%D0%BD%D0%B8%D0%BB%D1%81%D1%8F-%D1%8D%D1%82%D0%BE%D1%82-%D0%B4%D0%B5%D0%BD%D1%8C-%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%BC-%D0%B8%D0%B7-%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D1%85-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85-%D0%B4%D0%BD%D0%B5%D0%B9-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5.jpg?s=612x612&w=0&k=20&c=hUS0D2cwS18GKlhObyEVWpPGGd3b5mCWA7tyy50iVh4="
-          alt="Project 9"
-          class="w-full h-64 object-cover"
+          src="https://media.istockphoto.com/id/929904308/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B1%D1%83%D0%BA%D0%B5%D1%82-%D0%BD%D0%B0-%D0%BF%D0%BB%D1%8F%D0%B6%D0%B5.jpg?s=612x612&w=0&k=20&c=EzTzowHIftQUsXdnoGLDlOZhINpCLSzerN8ukGW1pNA="
+          alt="Minimalist"
+          class="w-full h-80 object-cover"
         />
-        <div class="p-4">
-          <h3 class="text-lg">Ceremony Highlights</h3>
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Minimalist</h3>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="overflow-hidden gallery-card">
+        <img
+          src="https://media.istockphoto.com/id/528482024/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE-%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B-%D1%81-%D1%86%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=eFx8nmaFLNQuzOIEOgTSqh6k1gVllY5kZnp89SCcexw="
+          alt="Country"
+          class="w-full h-80 object-cover"
+        />
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Country</h3>
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="overflow-hidden gallery-card">
+        <img
+          src="https://media.istockphoto.com/id/940217162/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD-%D0%BE%D0%B1%D1%80%D1%83%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BB%D1%8C%D1%86%D0%B0-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9.jpg?s=612x612&w=0&k=20&c=X6G_iTbVTX1M1APgYBrLngMvYG2e66aGKt-I3TUVYj0="
+          alt="Geometric"
+          class="w-full h-80 object-cover"
+        />
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Geometric</h3>
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="overflow-hidden gallery-card">
+        <img
+          src="https://media.istockphoto.com/id/1415056757/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%87%D0%BD%D1%8B%D0%B5-%D1%81%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8-%D0%BD%D0%BE%D1%87%D1%8C%D1%8E.jpg?s=612x612&w=0&k=20&c=vYaD3KNYYuf-X2PcmQgs_fBABCSm364L5Sc3nFs6ftY="
+          alt="Avant-garde"
+          class="w-full h-80 object-cover"
+        />
+        <div class="pt-4 text-center">
+          <h3 class="text-lg font-serif">Avant-garde</h3>
         </div>
       </div>
     </div>
