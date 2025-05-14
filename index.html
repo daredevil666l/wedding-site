@@ -65,10 +65,10 @@
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div class="text-2xl font-serif">YourBrand</div>
       <nav class="hidden md:flex space-x-8 text-gray-600">
-        <a href="#" class="hover:text-pink-400 transition-colors">About</a>
-        <a href="#" class="hover:text-pink-400 transition-colors">Quote</a>
-        <a href="#" class="hover:text-pink-400 transition-colors">Portfolio</a>
-        <a href="#" class="hover:text-pink-400 transition-colors">Contact</a>
+        <a href="index.html" class="text-pink-500 font-medium">Home</a>
+        <a href="quote.html" class="hover:text-pink-400 transition-colors">Quote</a>
+        <a href="portfolio.html" class="hover:text-pink-400 transition-colors">Portfolio</a>
+        <a href="contact.html" class="hover:text-pink-400 transition-colors">Contact</a>
       </nav>
       <button class="md:hidden text-gray-600">Menu</button>
     </div>
@@ -90,13 +90,13 @@
         </p>
         <div class="space-x-4">
           <a
-            href="#"
-            class="btn-soft inline-block px-8 py-3 bg-pink-200 text-white font-medium btn-soft animate__animated animate__pulse animate__infinite"
+            href="https://wa.me/1234567890"
+            class="btn-soft inline-block px-8 py-3 bg-pink-200 text-white font-medium animate__animated animate__pulse animate__infinite"
           >
             Chat on WhatsApp
           </a>
           <a
-            href="#"
+            href="quote.html"
             class="btn-soft inline-block px-8 py-3 border border-gray-400 text-gray-700 font-medium"
           >
             Bride Questionnaire
@@ -131,11 +131,11 @@
     <div class="container mx-auto px-6 max-w-xl">
       <h2 class="text-2xl font-serif text-center mb-6">Request a Quote</h2>
       <form class="space-y-4">
-        <input type="text" placeholder="Name *" class="w-full p-3 border" required />
-        <input type="email" placeholder="Email *" class="w-full p-3 border" required />
-        <input type="tel" placeholder="Phone *" class="w-full p-3 border" required />
-        <input type="date" class="w-full p-3 border" required />
-        <select class="w-full p-3 border" required>
+        <input type="text" name="name" placeholder="Name *" class="w-full p-3 border" required />
+        <input type="email" name="email" placeholder="Email *" class="w-full p-3 border" required />
+        <input type="tel" name="phone" placeholder="Phone *" class="w-full p-3 border" required />
+        <input type="date" name="date" class="w-full p-3 border" required />
+        <select name="budget" class="w-full p-3 border" required>
           <option>$3,000 – $5,000</option>
           <option>$5,000 – $8,000</option>
           <option>$8,000 – $12,000</option>
@@ -156,7 +156,7 @@
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,arch"
+          src="https://thumbs.dreamstime.com/b/wedding-arch-chairs-empty-beach-32036641.jpg"
           alt="Wedding Arch"
           class="w-full h-64 object-cover"
         />
@@ -166,7 +166,7 @@
       </div>
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,bouquet"
+          src="https://roadsidebloomsshop.com/cdn/shop/products/c077f32f-215c-4f5b-b193-65c89caef4d1_1000x.jpg?v=1599831795"
           alt="Bouquet"
           class="w-full h-64 object-cover"
         />
@@ -176,7 +176,7 @@
       </div>
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,table"
+          src="https://media.istockphoto.com/id/1197789061/photo/wedding-table-decoration-rustic-style.jpg?s=612x612&w=0&k=20&c=IJx-ctLD_BpSCuINW3nzVJS5xm7YUJR36wCYZ_ts6Tg="
           alt="Table Setting"
           class="w-full h-64 object-cover"
         />
@@ -186,7 +186,7 @@
       </div>
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,cake"
+          src="https://media.istockphoto.com/id/1413044707/photo/bride-and-a-groom-is-cutting-their-beautiful-wedding-cake-on-wedding-banquet-hands-cut-the.jpg?s=612x612&w=0&k=20&c=Ot683NljRGWmM4B6Ol_oNBkjv_QdqoSaFPt8xQgUxYM="
           alt="Wedding Cake"
           class="w-full h-64 object-cover"
         />
@@ -196,7 +196,7 @@
       </div>
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,flowers"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUySfBLbiQQTVC1BcrQnEayKmfLZJGAYt5w&s"
           alt="Floral Decor"
           class="w-full h-64 object-cover"
         />
@@ -206,7 +206,7 @@
       </div>
       <div class="smooth-card overflow-hidden">
         <img
-          src="https://source.unsplash.com/600x400/?wedding,venue"
+          src="https://www.ambiencevenuestyling.com/wp-content/uploads/2022/12/Neutral-Wedding-Styling-Ambience-Venue-Styling-Buckinghamshire.jpg"
           alt="Venue Decor"
           class="w-full h-64 object-cover"
         />
@@ -251,6 +251,7 @@
     <p>© 2025 YourBrand. All rights reserved.</p>
   </footer>
 
+  <!-- GSAP Animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script>

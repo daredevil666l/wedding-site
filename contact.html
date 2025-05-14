@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – YourBrand</title>
+  <!-- Tailwind CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary: #ffadc6;
+      --secondary: #f7ecec;
+      --text: #4a4a4a;
+      --soft-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--secondary);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Card styling */
+    .smooth-card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: var(--soft-shadow);
+      transition: transform .4s ease, box-shadow .4s ease, filter .3s ease;
+      overflow: hidden;
+    }
+    .smooth-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    /* Button styling */
+    .btn-soft {
+      border-radius: 9999px;
+      transition: transform .3s ease;
+    }
+    .btn-soft:hover {
+      transform: translateY(-2px);
+    }
+    /* Form fields */
+    input, select, textarea {
+      width: 100%;
+      padding: .75rem;
+      border: 1px solid #ddd;
+      border-radius: .5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: box-shadow .3s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      box-shadow: 0 4px 16px rgba(255, 173, 198, 0.4);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="bg-white fixed top-0 left-0 w-full z-20 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-serif">YourBrand</div>
+      <nav class="hidden md:flex space-x-8 text-gray-600">
+        <a href="index.html" class="hover:text-pink-400 transition-colors">Home</a>
+        <a href="quote.html" class="hover:text-pink-400 transition-colors">Quote</a>
+        <a href="portfolio.html" class="hover:text-pink-400 transition-colors">Portfolio</a>
+        <a href="contact.html" class="text-pink-500 font-medium">Contact</a>
+      </nav>
+      <button class="md:hidden text-gray-600">Menu</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section
+    class="pt-32 pb-20 bg-cover bg-center"
+    style="background-image:url('https://picsum.photos/id/1047/1600/900');"
+  >
+    <div class="backdrop-blur-sm bg-white bg-opacity-60 py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl mb-4 animate__animated animate__fadeInDown">
+          Let's Get in Touch
+        </h1>
+        <p class="max-w-2xl mx-auto mb-8 animate__animated animate__fadeIn">
+          We'd love to hear about your wedding plans. Reach out by phone, email, or
+          send us a message using the form below.
+        </p>
+        <a
+          href="tel:+1234567890"
+          class="btn-soft inline-block px-8 py-3 bg-pink-200 text-white font-medium animate__animated animate__pulse animate__infinite"
+        >
+          Call Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & INFO -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <div class="smooth-card p-8 animate__animated animate__fadeInUp">
+        <h2 class="text-2xl font-serif mb-6 text-center">Send Us a Message</h2>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" name="name" placeholder="Your Name *" required />
+            <input type="email" name="email" placeholder="Your Email *" required />
+          </div>
+          <input type="tel" name="phone" placeholder="Phone Number *" required />
+          <textarea name="message" rows="5" placeholder="Your Message *" required></textarea>
+          <button
+            type="submit"
+            class="btn-soft w-full py-3 bg-pink-200 text-white font-medium animate__animated animate__pulse animate__infinite"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="smooth-card p-8 animate__animated animate__fadeInUp animate__delay-1s">
+        <h2 class="text-2xl font-serif mb-6 text-center">Contact Details</h2>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-2xl mr-4">📍</span>
+            <div>
+              <strong>Address</strong><br/>
+              123 Wedding Street,<br/>
+              Cityville, ST 12345
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-4">📞</span>
+            <div>
+              <strong>Phone</strong><br/>
+              +1 234 567 8900
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-4">✉️</span>
+            <div>
+              <strong>Email</strong><br/>
+              info@yourbrand.com
+            </div>
+          </li>
+        </ul>
+        <div class="mt-8 text-center">
+          <h3 class="text-xl mb-4">Follow Us</h3>
+          <div class="flex justify-center space-x-4 text-gray-600">
+            <a href="#" class="hover:text-pink-400 transition-colors text-2xl">FB</a>
+            <a href="#" class="hover:text-pink-400 transition-colors text-2xl">IG</a>
+            <a href="#" class="hover:text-pink-400 transition-colors text-2xl">PT</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-gray-100 text-center text-gray-500">
+    <p>© 2025 YourBrand. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('section, .smooth-card').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 85%' },
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        delay: i * 0.1
+      });
+    });
+  </script>
+
+</body>
+</html>
